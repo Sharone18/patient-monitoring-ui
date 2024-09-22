@@ -1,0 +1,33 @@
+<!-- src/app/patient/patient.component.html -->
+<div class="container">
+  <h2>{{ isAddPatient ? 'Add Patient' : 'View Patient' }}</h2>
+  <button (click)="toggleOption()">
+    Switch to {{ isAddPatient ? 'View Patient' : 'Add Patient' }}
+  </button>
+
+  <form (ngSubmit)="onConfirm()">
+    <div *ngIf="isAddPatient">
+      <label for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" [(ngModel)]="patientName" name="patientName" required />
+
+<!--      <label for="patientId">Patient Id:</label>-->
+<!--      <input type="text" id="patientId" [(ngModel)]="patientName" name="patientId" required />-->
+
+      <label for="patientAge">Age:</label>
+      <input type="text" id="patientAge" [(ngModel)]="patientAge" name="patientAge" required />
+
+      <label for="patientSex">Sex:</label>
+      <select id="patientSex" [(ngModel)]="patientGender" name="patientSex" required>
+        <option value="" disabled>Select Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <label for="patientId">Patient ID:</label>
+    <input type="text" id="patientId" [(ngModel)]="patientId" name="patientId" required />
+
+    <button type="submit">Confirm</button>
+  </form>
+</div>

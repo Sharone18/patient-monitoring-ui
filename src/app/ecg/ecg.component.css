@@ -1,0 +1,16 @@
+/* styles.css or your component's CSS file */
+.chart-container {
+  width: 100%;              /* Full horizontal width */
+  height: 33vh;            /* One-third of the viewport height */
+  display: flex;           /* Flexbox for centering or aligning items */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  background-color: #f0f0f0; /* Optional: background color for the chart area */
+  border: 1px solid #ccc;  /* Optional: border around the chart */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+canvas {
+  max-width: 100%;         /* Ensure the canvas fits within the container */
+  max-height: 100%;        /* Ensure the canvas fits within the container */
+}

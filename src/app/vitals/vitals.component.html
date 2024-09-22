@@ -1,0 +1,23 @@
+<!-- src/app/vitals/vitals.component.html -->
+<div class="vitals-container">
+  <div class="vital-box" [ngStyle]="{ 'background-color': getRespiratoryRateColor() }">
+    <h3>Respiratory Rate</h3>
+    <p>{{ respiratoryRate }} breaths/min</p>
+  </div>
+  <div class="vital-box" [ngStyle]="{ 'background-color': getPulseColor() }">
+    <h3>Pulse</h3>
+    <p>{{ pulse }} bpm</p>
+  </div>
+  <div class="vital-box" [ngStyle]="{ 'background-color': getTemperatureColor() }">
+    <h3>Temperature</h3>
+    <p>{{ temperature }} °C</p>
+  </div>
+  <div class="vital-box" [ngStyle]="{ 'background-color': getBloodPressureColor() }">
+    <h3>Blood Pressure</h3>
+    <p>{{ systolic }} / {{ diastolic }} mmHg</p>
+  </div>
+  <div class="vital-box" [ngStyle]="{ 'background-color': getSpO2Colour() }">
+    <h3>SpO2</h3>
+    <p>{{ spo2 }} %</p>
+  </div>
+</div>

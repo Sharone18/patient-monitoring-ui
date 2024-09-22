@@ -1,0 +1,18 @@
+/* src/app/vitals/vitals.component.css */
+.vitals-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between boxes */
+  width: 66.67%; /* 2/3 of the page width */
+  margin: 20px auto; /* Center the container */
+}
+
+.vital-box {
+  background-color: #ffffff; /* White background for each box */
+  border: 1px solid #ccc; /* Border for each box */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside each box */
+  text-align: center; /* Center align text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
