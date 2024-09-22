@@ -9,7 +9,7 @@ import {PatientModel} from "./PatientModel";
 })
 export class ApiServiceService {
 
-  private baseUrl = 'http://localhost:8080'; // Adjust to your Spring Boot server
+  private baseUrl = 'http://34.41.129.160:8080'; // Adjust to your Spring Boot server
 
   constructor(private http: HttpClient) {}
 
