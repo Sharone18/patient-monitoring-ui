@@ -1,17 +1,14 @@
-# Use the official OpenJDK 17 base image
-FROM openjdk:17-jdk-slim as base
+# Use the official Nginx image as a base
+FROM nginx:alpine
 
-# Install Nginx
-RUN apt-get update && \
-    apt-get install -y nginx && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Copy the built Angular files from the dist folder to Nginx's html folder
+COPY ./dist/ecg-waveform /usr/share/nginx/html
 
-# Copy Nginx configuration file (if you have a custom configuration)
-# COPY nginx.conf /etc/nginx/nginx.conf
+# Copy a custom nginx configuration file (optional)
+#COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose the ports for Nginx and your application (if needed)
-EXPOSE 80 8080
+# Expose port 80
+EXPOSE 80
 
-# Start Nginx and run your application
-CMD service nginx start && tail -f /dev/null
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
